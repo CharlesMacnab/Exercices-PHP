@@ -2,9 +2,9 @@
 
 <?php
 
-class formulaire{
+final class formulaire{
 
-    private $formulaire;
+    protected $formulaire;
 
     public function __construct($fichier,$m )
     {
@@ -12,7 +12,7 @@ class formulaire{
     }
 
     public function ajouterzonetexte($texte){
-    $mytext = $texte." : <input type='text' name='".$texte."'>";
+    $mytext = $texte." : <input type='text' name='".$texte."'><br>";
     $position = strrpos($this->formulaire,'<',-1);
     $part1 = substr($this->formulaire,0,$position);
     $part2 = substr($this->formulaire,$position);
@@ -20,7 +20,7 @@ class formulaire{
     }
 
     public function ajouterbouton($texte){
-        $mytext = "<input type="."submit"." value=".$texte." />";
+        $mytext = "<input type="."submit"." value=".$texte."><br>";
         $position = strrpos($this->formulaire,'<',-1);
         $part1 = substr($this->formulaire,0,$position);
         $part2 = substr($this->formulaire,$position);
