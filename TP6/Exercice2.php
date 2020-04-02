@@ -2,7 +2,7 @@
 
 <?php
 
-final class formulaire{
+/*final*/ class formulaire{
 
     protected $formulaire;
 
